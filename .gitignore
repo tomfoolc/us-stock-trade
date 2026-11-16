@@ -1,1 +1,14 @@
+# Secrets — 絕對唔入 repo
+.env
+*.key
+*.pem
+credentials/
 
+# Raw data — 放本地，唔入 git
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
