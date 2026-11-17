@@ -33,7 +33,11 @@
 paper-trading/
 ├── README.md
 ├── .gitignore
-├── rules/                  # 只放已鎖定規則
+├── rules/                  # 只放已鎖定規則；以下四份係基線／草稿，狀態見各檔檔頭
+│   ├── 美股研究及Paper_Trading系統需求與制定方針_v0.1.md  # v0.1 基線，凍結唔改
+│   ├── 美股策略_v0.2_Strategy_v1_草稿.md                    # 草稿，未採納
+│   ├── v0.2決定工作表_草稿.md
+│   ├── 美股研究及Paper_Trading系統需求審閱附錄_v0.1-review.md  # 草稿
 │   ├── 已鎖定規則.md        # 資金、風險、股數公式、ATR
 │   ├── 選股框架.md
 │   ├── 入場方式.md          # A／B
@@ -59,12 +63,17 @@ paper-trading/
 ├── scripts/                # Alpaca 數據、篩選、市寬、sector 程式
 ├── data/
 │   ├── raw/                # 原始大數據，唔入 git
-│   └── digests/            # 每日摘要
+│   └── digests/            # 每日摘要（YYYY-MM-DD.md，一日一個檔，累積）
+│       ├── weekly/         # 每週市寬回顧（YYYY-Www.md＋WEEKLY_TEMPLATE.md）
+│       └── monthly/        # 每月市寬回顧（YYYY-MM.md＋MONTHLY_TEMPLATE.md）
 ├── docs/
 │   ├── 文件使用原則.md
 │   ├── 數據來源.md
 │   ├── 實施次序.md
+│   ├── 架構決定_草稿.md     # 草稿，未採納
 │   ├── bots.md
+│   ├── prompts/
+│   │   └── 新Paper_Trade_Bot_Instruction_Prompt.md  # 草稿，等 Strategy v1 確認先用
 │   └── 交接文件/
 │       └── Perplexity交接_2026-11-16.md
 └── logs/
@@ -78,6 +87,6 @@ Trigger、例外成交處理、sector 起步限制、完整退出規則、選股
 ## 注意
 
 - 已鎖定規則喺 `rules/`；未定事項一律喺 `decisions/decisions-needed.md`，唔可以當規則用。
-- v0.1 需求文件、Strategy v1 草稿、v0.2 決定工作表、架構決定草稿、新 bot instruction prompt 目前仍喺 `../files/`，開 repo 嗰陣搬入 `rules/`／`docs/`／`docs/prompts/`。
+- v0.1 需求文件、Strategy v1 草稿、v0.2 決定工作表、審閱附錄、架構決定草稿、新 bot instruction prompt 已經由 `../files/` 搬入 `rules/`／`docs/`／`docs/prompts/`（本地暫存，未推上 GitHub）。原本 `../files/` 嘅正本留低未刪，等推上 GitHub 確認無誤先至清理，唔好留兩個版本。
 - 規則改動留版本及差異紀錄，唔好淨係覆寫（見 `rules/規則變更紀錄.md`）。
 - 第一階段只做 paper trade，唔做實盤。
