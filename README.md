@@ -57,6 +57,8 @@ paper-trading/
 ├── decisions/
 │   ├── decisions-needed.md # 全部待定事項
 │   └── decisions-log.md    # 已批決定紀錄
+├── ai-comm/                 # Muse ↔ Grok Bot 溝通
+│   └── muse-grokbot/        # muse-YYYYMMDD-rNNN.md / grokbot-YYYYMMDD-rNNN.md
 ├── research/
 │   ├── queue.md            # 問 Perplexity 嘅問題
 │   └── answers/

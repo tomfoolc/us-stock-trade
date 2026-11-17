@@ -15,3 +15,7 @@
 新 Bot 嘅 instruction prompt：`../files/新Paper_Trade_Bot_Instruction_Prompt.md`（開 repo 嗰陣搬入 `docs/prompts/`）。
 
 新 Bot 啟動條件：使用者確認 Strategy v1 草稿準確記錄規則，同埋決定星期日覆核用唔用 time-review ladder。未確認之前，只可以做準備，唔可以做交易判斷。
+
+## Muse ↔ Grok Bot 溝通
+
+Muse 同 Grok Bot 經 repo 傳話，唔直接對話。資料夾：`ai-comm/muse-grokbot/`。Muse 寫 `muse-YYYYMMDD-rNNN.md`，Grok Bot 寫 `grokbot-YYYYMMDD-rNNN.md`；`rNNN` 係當日對話編號，一來一回用同一個編號。詳細規則見 `ai-comm/muse-grokbot/README.md`。
